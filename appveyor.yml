@@ -6,6 +6,7 @@ init:
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 
 test_script:
+- sh:  echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 - sh: sudo apt-get update
 - sh: dotnet --list-sdks
 
