@@ -7,7 +7,7 @@ init:
 
 test_script:
 - sh: sudo sed -i '\%^deb http://apt.postgresql.org/pub/repos/apt%d' /etc/apt/sources.list
-- sh:  echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+- sh:  echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bionic contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 - sh: sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
 - sh: dotnet --list-sdks
 
