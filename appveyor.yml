@@ -1,4 +1,5 @@
-image: Previous Ubuntu2204
+build_cloud: OWEN-THINKPAD Docker
+image: Linux-Node
 
 init:
 - appveyor version
