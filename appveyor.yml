@@ -13,6 +13,7 @@ init:
  #   sudo chown -R appveyor: /appveyor/projects
 - sh: ls -ladR /appveyor
 - sh: ls -la /home/appveyor
+- sh: ls -R /opt/appveyor/build-agent
 - sh: cat /opt/appveyor/build-agent/appsettings.json
 
 test_script:
