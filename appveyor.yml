@@ -8,7 +8,7 @@ init:
 - sh: >-
     [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
 - sh: >-    
-    [[ ! -d "/appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
+    [[ ! -d "./appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
 
 #- sh: ls -aR /appveyor
 #- sh: ls -aR /home/appveyor
