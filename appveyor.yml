@@ -5,6 +5,8 @@ init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
+- sh: whoami
+- sh: echo $HOME
 #- sh: >-
  #   [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
 #- sh: >-    
