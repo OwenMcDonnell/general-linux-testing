@@ -1,6 +1,6 @@
 build_cloud: OWEN-THINKPAD Docker
 image: Linux-Node
-clone_folder: /home/appveyor/projects/general-linux-testing
+#clone_folder: /home/appveyor/projects/general-linux-testing
 init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
