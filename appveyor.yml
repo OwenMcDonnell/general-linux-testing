@@ -8,10 +8,10 @@ init:
 - sh: >-
     [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
 - sh: >-    
-    [[ ! -d "./appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
+    [[ ! -d "/appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
 
-- sh: ls -aR /appveyor
-- sh: ls -aR /home/appveyor
+- sh: ls -a /appveyor
+- sh: ls -a /home/appveyor
 - sh: cat /opt/appveyor/build-agent/appsettings.json
 
 test_script:
