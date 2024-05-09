@@ -5,8 +5,10 @@ init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
-- sh: [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
-- sh: [[ ! -d "/appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
+- sh: >-
+    [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
+    [[ ! -d "/appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
+#- sh: [[ ! -d "/appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
 - sh: cat /opt/appveyor/build-agent/appsettings.json
 
 test_script:
