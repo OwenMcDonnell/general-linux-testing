@@ -1,4 +1,4 @@
-build_cloud: OWEN-THINKPAD Docker
+build_cloud: DESKTOP-5L77HE9 Docker
 image: Linux-Node
 #clone_folder: /home/appveyor/projects/general-linux-testing
 init:
