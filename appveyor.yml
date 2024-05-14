@@ -11,12 +11,11 @@ init:
  #   [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
 #- sh: >-    
  #   [[ ! -d "./appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
-#- sh: >-
- #   sudo chown -R appveyor: /appveyor/projects
+- sh: >-
+    sudo chown -R appveyor: /appveyor/projects
 - sh: ls -ladR /appveyor
 - sh: ls -la /home/appveyor
-- sh: ls -R /opt/appveyor/build-agent
-- sh: cat /opt/appveyor/build-agent/appsettings.json
+#- sh: cat /opt/appveyor/build-agent/appsettings.json
 
 test_script:
 - sh: ldd --version
