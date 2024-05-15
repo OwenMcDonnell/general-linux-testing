@@ -22,7 +22,7 @@ test_script:
 #- sh: sudo sed -i '\%http://apt.postgresql.org/pub/repos/apt%d' /etc/apt/sources.list
 #- sh: sudo sed -i '\%http://download.virtualbox.org/virtualbox/debian%d' /etc/apt/sources.list
 #- sh:  echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bionic contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-- sh: apt-get update && sudo apt-get install -y dotnet-sdk-8.0
+- sh: apt-get update && apt-get install -y dotnet-sdk-8.0
 - sh: dotnet --list-sdks
 #- sh: node --version
 
