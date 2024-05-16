@@ -1,7 +1,7 @@
 build_cloud: DESKTOP-5L77HE9 Docker
 image: Linux-Node
 #image: Ubuntu2004
-#clone_folder: /home/appveyor/projects/
+clone_folder: /home/appveyor/projects/
 init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
@@ -17,6 +17,7 @@ init:
 - sh: ls -laR /appveyor
 - sh: ls -la /home/appveyor
 - sh: cat /opt/appveyor/build-agent/appsettings.json
+- sh: grep -Po '^sudo.+:\K.*$' /etc/group
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
