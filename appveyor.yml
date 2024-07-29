@@ -1,5 +1,5 @@
-build_cloud: DESKTOP-5L77HE9 Docker
-image: Linux-Node
+#build_cloud: DESKTOP-5L77HE9 Docker
+#image: Linux-Node
 #image: Ubuntu2004
 # clone_folder: /home/appveyor/projects/
 init:
@@ -14,6 +14,7 @@ init:
  #   [[ ! -d "./appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
 #- sh: >-
  #   chown -R appveyor: /home/appveyor/projects
+- sh: df -h --total
 - sh: ls -laR /appveyor
 - sh: ls -la /home/appveyor
 - sh: cat /opt/appveyor/build-agent/appsettings.json
