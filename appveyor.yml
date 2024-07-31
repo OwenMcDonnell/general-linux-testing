@@ -17,8 +17,8 @@ init:
 #- sh: >-
  #   chown -R appveyor: /home/appveyor/projects
 - sh: df -h --total
-- sh: ls -laR /appveyor
-- sh: ls -la /home/appveyor
+#- sh: ls -laR /appveyor
+#- sh: ls -la /home/appveyor
 - sh: cat /opt/appveyor/build-agent/appsettings.json
 - sh: grep -Po '^sudo.+:\K.*$' /etc/group
 #- sh: cat /etc/docker/daemon.json
