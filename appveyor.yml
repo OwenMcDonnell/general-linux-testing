@@ -2,12 +2,15 @@
 #image: Linux-Node
 #image: Ubuntu2004
 # clone_folder: /home/appveyor/projects/
+stack:
+  - python 3.13
 init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 - sh: whoami
 - sh: echo $HOME
+- sh: python --version
 #- sh: >-
  #   [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
 #- sh: >-    
