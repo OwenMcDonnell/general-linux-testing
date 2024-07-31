@@ -10,7 +10,6 @@ init:
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 - sh: whoami
 - sh: echo $HOME
-- sh: python --version
 #- sh: >-
  #   [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
 #- sh: >-    
@@ -25,6 +24,9 @@ init:
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
+- sh: |
+    python --version
+    python -c 'import sys; print (sys.version_info)'
 - sh: ldd --version
 #- sh: sudo sed -i '\%http://apt.postgresql.org/pub/repos/apt%d' /etc/apt/sources.list
 #- sh: sudo sed -i '\%http://download.virtualbox.org/virtualbox/debian%d' /etc/apt/sources.list
