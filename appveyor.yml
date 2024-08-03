@@ -1,9 +1,9 @@
 #build_cloud: DESKTOP-5L77HE9 Docker
 #image: Linux-Node
-#image: Ubuntu2004
+image: Ubuntu1804
 # clone_folder: /home/appveyor/projects/
 stack:
-  - python 3.13
+  - node 18
 init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
@@ -24,9 +24,10 @@ init:
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
-- sh: |
-    python --version
-    python -c 'import sys; print (sys.version_info)'
+# - sh: |
+#     python --version
+#     python -c 'import sys; print (sys.version_info)'
+- sh: node --version
 - sh: ldd --version
 #- sh: sudo sed -i '\%http://apt.postgresql.org/pub/repos/apt%d' /etc/apt/sources.list
 #- sh: sudo sed -i '\%http://download.virtualbox.org/virtualbox/debian%d' /etc/apt/sources.list
