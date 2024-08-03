@@ -3,7 +3,7 @@
 image: Ubuntu1804
 # clone_folder: /home/appveyor/projects/
 stack:
-  - node 18
+  - node 19
 init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
