@@ -1,6 +1,6 @@
 #build_cloud: DESKTOP-5L77HE9 Docker
 #image: Linux-Node
-image: Ubuntu2004
+image: Ubuntu2204
 # clone_folder: /home/appveyor/projects/
 #stack:
  # - python 3.13
