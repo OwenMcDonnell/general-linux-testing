@@ -2,8 +2,8 @@
 #image: Linux-Node
 image: Ubuntu2004
 # clone_folder: /home/appveyor/projects/
-stack:
-  - python 3.13
+#stack:
+ # - python 3.13
 init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
