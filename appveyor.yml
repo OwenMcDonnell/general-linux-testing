@@ -24,6 +24,10 @@ init:
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
+- sh: openssl version
+- sh: sudo apt-get update
+- sh: sudo apt-get install --only-upgrade openssl
+- sh: openssl version
 - sh: |
     python --version
     python -c 'import sys; print (sys.version_info)'
