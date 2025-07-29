@@ -24,12 +24,12 @@ init:
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
+- sh: curl -v https://sequensis.myget.org/F/tool-packages/auth/9793a328-23d0-4400-afc3-516fb0354bd5/api/v3/index.json
 - sh: openssl version
 #- sh: sudo apt-get update
 - sh: sudo apt-get install --only-upgrade openssl
 - sh: sudo apt-get install --reinstall ca-certificates
-- sh: sudo update-ca-certificates
-- sh: openssl version
+
 - sh: |
     python --version
     python -c 'import sys; print (sys.version_info)'
