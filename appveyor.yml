@@ -25,6 +25,7 @@ init:
 
 test_script:
 
+- sh: ls -lisa /usr/bin/gcc*
 - sh: openssl version
 #- sh: sudo apt-get update
 - sh: sudo apt-get install --only-upgrade openssl
