@@ -29,7 +29,8 @@ init:
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
-- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+- sh: ls -l $HOME/Qt:
+#- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 - sh: ls -lisa /usr/bin/gcc*
 - sh: openssl version
 #- sh: sudo apt-get update
