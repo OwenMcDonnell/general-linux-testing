@@ -1,6 +1,6 @@
 #build_cloud: DESKTOP-5L77HE9 Docker
 #image: Linux-Node
-image: Previous Ubuntu2204
+image: Ubuntu2204
 # clone_folder: /home/appveyor/projects/
 environment:
   APPVEYOR_SSH_KEY:
