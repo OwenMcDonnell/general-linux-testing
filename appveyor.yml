@@ -1,6 +1,10 @@
 #build_cloud: DESKTOP-5L77HE9 Docker
 #image: Linux-Node
-#image: Ubuntu2004
+image: 
+  - Ubuntu2004
+  - Ubuntu
+  - Previous Ubuntu
+  - Previous Ubuntu2004
 # clone_folder: /home/appveyor/projects/
 # environment:
 #   APPVEYOR_SSH_KEY:
@@ -29,6 +33,7 @@ init:
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
+- sh: echo $JAVA_HOME
 - sh: ls -l $HOME/Qt
 - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 - sh: ls -lisa /usr/bin/gcc*
