@@ -34,6 +34,7 @@ init:
 
 test_script:
 - sh: echo $JAVA_HOME
+- sh: ls -al "$JAVA_HOME"
 # - sh: ls -l $HOME/Qt
 # - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 # - sh: ls -lisa /usr/bin/gcc*
