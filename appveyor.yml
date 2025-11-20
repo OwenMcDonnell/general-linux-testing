@@ -1,6 +1,7 @@
 #build_cloud: DESKTOP-5L77HE9 Docker
 #image: Linux-Node
 image: 
+  - Ubuntu2204
   - Ubuntu2004
   - Ubuntu
   - Previous Ubuntu
