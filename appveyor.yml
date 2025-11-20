@@ -17,35 +17,35 @@ init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
-- sh: whoami
-- sh: echo $HOME
+#- sh: whoami
+#- sh: echo $HOME
 #- sh: >-
  #   [[ ! -d "/home/appveyor/projects" ]] && echo "Home Project directory doesn't exist."
 #- sh: >-    
  #   [[ ! -d "./appveyor/projects" ]] && echo "Appveyor Project directory doesn't exist."
 #- sh: >-
  #   chown -R appveyor: /home/appveyor/projects
-- sh: df -h --total
+#- sh: df -h --total
 #- sh: ls -laR /appveyor
 #- sh: ls -la /home/appveyor
-- sh: cat /opt/appveyor/build-agent/appsettings.json
-- sh: grep -Po '^sudo.+:\K.*$' /etc/group
+#- sh: cat /opt/appveyor/build-agent/appsettings.json
+#- sh: grep -Po '^sudo.+:\K.*$' /etc/group
 #- sh: cat /etc/docker/daemon.json
 
 test_script:
 - sh: echo $JAVA_HOME
-- sh: ls -l $HOME/Qt
-- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
-- sh: ls -lisa /usr/bin/gcc*
-- sh: openssl version
+# - sh: ls -l $HOME/Qt
+# - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+# - sh: ls -lisa /usr/bin/gcc*
+# - sh: openssl version
 #- sh: sudo apt-get update
-- sh: sudo apt-get install --only-upgrade openssl
-- sh: sudo apt-get install --reinstall ca-certificates
-- sh: curl -v https://sequensis.myget.org/F/tool-packages/auth/9793a328-23d0-4400-afc3-516fb0354bd5/api/v3/index.json
+# - sh: sudo apt-get install --only-upgrade openssl
+# - sh: sudo apt-get install --reinstall ca-certificates
+# - sh: curl -v https://sequensis.myget.org/F/tool-packages/auth/9793a328-23d0-4400-afc3-516fb0354bd5/api/v3/index.json
 
-- sh: |
-    python --version
-    python -c 'import sys; print (sys.version_info)'
+# - sh: |
+#     python --version
+#     python -c 'import sys; print (sys.version_info)'
      
 - sh: node --version
 - sh: ldd --version
