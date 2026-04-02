@@ -1,4 +1,6 @@
 #build_cloud: DESKTOP-5L77HE9 Docker
+build_cloud: AWS us-west-2 t2.nano
+image: Linux
 #image: Linux-Node
 # image: 
 #   - Ubuntu2204
