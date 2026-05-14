@@ -1,5 +1,6 @@
 #build_cloud: DESKTOP-5L77HE9 Docker
 #build_cloud: AWS us-west-2 t2.nano
+build_cloud: lw-host-20-e
 image: Ubuntu2404
 #image: Linux-Node
 # image: 
